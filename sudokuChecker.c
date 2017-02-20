@@ -162,8 +162,8 @@ int sudokuChecker(void)
 /**
  * Checks each row if it contains all digits 1-9.
  */
-void * checkRows(void * checks) {
-    checks * data = (checks *) malloc(sizeof (checks));
+void * checkRows(void * check) {
+    checks * data = (checks *) check;
     int startRow = data->row;
     // allows modify startRow w/o board modify
     int startCol = data->col;
