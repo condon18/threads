@@ -182,8 +182,8 @@ void * checkRows(void * check) {
     }
     return (void *) 1;
 }
-void * checkCols(void * checks) {
-    checks * data = (checks *) malloc(sizeof (checks));
+void * checkCols(void * check) {
+    checks * data = (checks *) check;
     int startRow = data->row;
     int startCol = data->col;
     for (int i = startCol; i < 9; ++i) {
@@ -204,8 +204,8 @@ void * checkCols(void * checks) {
 /**
  * Checks if a square of size 3x3 contains all numbers from 1-9.
   */
-void * checkSquare(void * checks) {
-    checks * data = (checks *) malloc(sizeof (checks));
+void * checkSquare(void * check) {
+    checks * data = (checks *) check;
     int startRow = data->row;
     int startCol = data->col;
     int subsection[10] = {0};
